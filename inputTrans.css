@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.container {
+  background-color: black;
+  /* border-radius: 10px; */
+  margin-top: 5px;
+  height: 350px;
+}
+
+.container h2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding: 25px;
+}
+
+.container .formInput form {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.container .formInput div {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  border-radius: 5px;
+}
+
+.container .formInput div.button {
+  display: flex;
+  justify-content: end;
+}
+
+.container .formInput .kolom label {
+  grid-column: span 3;
+}
+
+.container .formInput .kolom input {
+  grid-column: span 9;
+  border-radius: 5px;
+}
+
+.container .formInput .button button {
+  grid-column: span 12;
+  width: 80px;
+  height: 31px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* .container .formInput .button {
+    justify-items: end;
+} */
+
+/* ini contoh pake tailwind (framework buat css) */
+/* .coba form {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.kol {
+    grid-column: span 12 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.kol label {
+    grid-column: span 83 / span 3;
+}
+
+.kol input {
+    grid-column: span 9 / span 9;
+} */

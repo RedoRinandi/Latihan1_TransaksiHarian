@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaksi harian</title>
+
+    <link rel="stylesheet" href="halamanAwal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="info">
+          <div class="avatar">
+            <svg
+              data-icon-name="user-2"
+              data-style="line"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              id="user-2"
+              class="icon line"
+              width="24"
+              height="24"
+            >
+              <path
+                style="
+                  fill: none;
+                  stroke: rgb(0, 0, 0);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 1;
+                "
+                d="M16,7a4,4,0,1,1-4-4A4,4,0,0,1,16,7Zm0,8H8a4,4,0,0,0-4,4H4a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2h0A4,4,0,0,0,16,15Z"
+                id="primary"
+              ></path>
+            </svg>
+          </div>
+          <p>Hello, <span class="userProfil" id="userProfile"></span></p>
+        </div>
+        <svg
+          data-icon-name="menu"
+          data-style="line"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          id="menu"
+          class="icon line"
+          width="20"
+          height="20"
+        >
+          <path
+            style="
+              fill: none;
+              stroke: rgb(234, 234, 234);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 1;
+            "
+            d="M9,18H21M3,12H21M3,6H15"
+            id="primary"
+          ></path>
+        </svg>
+      </div>
+      <div class="heroImage"></div>
+      <div class="link">
+        <div class="navigasi">
+          <div class="descNav1">
+            <a href="inputTrans.html">
+              <div class="nav1">
+                <svg
+                  data-icon-name="agenda-2"
+                  data-style="line"
+                  icon_origin_id="18649"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="agenda-2"
+                  class="icon line"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    style="
+                      fill: none;
+                      stroke: rgb(255, 255, 255);
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-width: 1;
+                    "
+                    d="M17,7V4a1,1,0,0,0-1-1H5A1,1,0,0,0,4,4V20a1,1,0,0,0,1,1h8"
+                    id="primary"
+                  ></path>
+                  <path
+                    style="
+                      fill: none;
+                      stroke: rgb(255, 255, 255);
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-width: 1;
+                    "
+                    d="M18,11h2a1,1,0,0,1,1,1v7l-2,2-2-2V12A1,1,0,0,1,18,11ZM3,8H5M3,12H5M3,16H5"
+                    data-name="primary"
+                    id="primary-2"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <span>Input Trans</span>
+          </div>
+          <div class="descNav2">
+            <a href="laporanTrans.html">
+              <div class="nav2">
+                <svg
+                  data-icon-name="agenda-book"
+                  data-style="line"
+                  icon_origin_id="15528"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="agenda-book"
+                  class="icon line"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    style="
+                      fill: none;
+                      stroke: rgb(255, 255, 255);
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-width: 1;
+                    "
+                    d="M18,21H4a1,1,0,0,1-1-1V4A1,1,0,0,1,4,3H18a1,1,0,0,1,1,1V20A1,1,0,0,1,18,21ZM21,7H19V9h2Zm0,6H19v2h2ZM15,7H7v4h8Z"
+                    id="primary"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+            <span>Laporan Trans</span>
+          </div>
+        </div>
+      </div>
+      <div id="mainContent" class="mainContent">
+        <div class="mainDesc">
+          <h3>Transaksi terkini</h3>
+          <a href="laporanTrans.html">Lihat semua</a>
+        </div>
+        <div id="mainContent1" class="mainContent1">
+          <div class="borderIcon">
+            <div id="icon" class="icon">
+              <svg
+                data-icon-name="sign-out-2"
+                data-style="line"
+                icon_origin_id="12090"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                id="sign-out-2"
+                class="icon line"
+                width="30"
+                height="30"
+              >
+                <polyline
+                  style="
+                    fill: none;
+                    stroke: rgb(234, 234, 234);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1;
+                  "
+                  points="18 9 21 12 18 15"
+                  id="primary"
+                ></polyline>
+                <path
+                  style="
+                    fill: none;
+                    stroke: rgb(234, 234, 234);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1;
+                  "
+                  d="M21,12H7m7,4v3a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1V5A1,1,0,0,1,4,4h9a1,1,0,0,1,1,1V8"
+                  data-name="primary"
+                  id="primary-2"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div id="ket" class="ket">ket</div>
+          <div id="tanggal" class="tanggal">Tanggal</div>
+          <div id="jumlah" class="jumlah">Jumlah</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

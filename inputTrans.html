@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Transaksi</title>
+
+    <link rel="stylesheet" href="inputTrans.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <h2>Input Transaksi</h2>
+        <div class="formInput">
+            <form id="formtransaksi">
+                <div class="kolom">
+                    <label for="#">Tanggal</label>
+                    <input id="tanggal" required oninvalid="this.setCustomValidity('Tanggal harus di isi.')" class="kolomInput" name="tanggal" type="date" style="width: 100px; height: 22px; margin-right: 65px;">
+                </div>
+                <div class="kolom">
+                    <label for="#">Keterangan</label>
+                    <input id="keterangan" required class="kolomInput" name="ket" type="text" style="height: 20px;">
+                </div>
+                <div class="kolom">
+                    <label for="#">Jumlah</label>
+                    <input id="jumlah" class="kolomInput" required name="jml" type="number" style="height: 20px;">
+                </div>
+                <div class="button">
+                    <button type="submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="button">
+            <button type="submit" onclick="Submit">Simpan</button>
+        </div> -->
+
+        <!-- <div class="coba">
+            <form>
+                <div class="kol">
+                    <label for="#">Tanggal</label>
+                    <input class="kolomInput" name="tanggal" type="date"
+                        style="width: 100px; height: 22px; margin-right: 65px;">
+                </div>
+                <div class="kol">
+                    <label for="#">Keterangan</label>
+                    <input class="kolomInput" name="ket" type="text" style="height: 20px;">
+                </div>
+                <div class="kol">
+                    <label for="#">Jumlah</label>
+                    <input class="kolomInput" name="jml" type="number" style="height: 20px;">
+                </div>
+            </form>
+        </div>
+    </div> -->
+    <script src="inputTrans.js"></script>
+</body>
+</html>

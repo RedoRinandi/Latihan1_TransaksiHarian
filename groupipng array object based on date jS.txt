@@ -1,0 +1,85 @@
+// Sample array of objects with date property
+const data = [
+    { date: '2023-08-01', value: 10 },
+    { date: '2023-08-01', value: 15 },
+    { date: '2023-08-02', value: 20 },
+    { date: '2023-08-03', value: 25 },
+    // ... more data
+];
+
+// Create a Map for grouping
+const groupedData = new Map();
+
+// Loop through the array and group by date
+data.forEach(item => {
+    const date = item.date;
+    
+    if (groupedData.has(date)) {
+        groupedData.get(date).push(item);
+    } else {
+        groupedData.set(date, [item]);
+    }
+});
+
+// Convert Map to an array of grouped objects
+const result = [...groupedData.entries()].map(([date, items]) => ({ date, items }));
+
+console.log(result);
+
+
+--------------------------------------------------------------
+
+// Get data from label input (assuming you have an input element with id "dataInput")
+const inputData = document.getElementById("dataInput").value;
+
+// Parse the input data into an object (assuming inputData is in JSON format)
+const parsedData = JSON.parse(inputData);
+
+// Group the parsed data by date using the same approach as before
+const groupedData = parsedData.reduce((result, item) => {
+  const date = item.date;
+  if (!result[date]) {
+    result[date] = [];
+  }
+  result[date].push(item);
+  return result;
+}, {});
+
+// Convert the groupedData object to a string
+const groupedDataString = JSON.stringify(groupedData);
+
+// Store the grouped data in local storage
+localStorage.setItem("groupedData", groupedDataString);
+
+----------------------------------------------------------------------
+udah bener ini cara grouping nya
+
+const dataTemp = [tgl, ket, jml];
+  let groupedData = groupData(dataTemp);
+  console.log(groupedData);
+
+// ini fungsinya
+const groupData = (itemGroup, item) => {
+
+//ini bikin object kosong
+let grouped = {};
+
+// kemudian looping data yg dikirim dari parameter
+  for(let i=0; i < itemGroup.length; i++) {
+
+    // ini bikin key untuk dimasukkan ke object
+    let p = itemGroup[0];
+
+    // cek jika key belum ada ada 
+    if (!grouped[p]) {
+      // kalau belum ada, maka buat key dengan nilai array kosong
+      grouped[p] = [];
+    }
+
+    // selanjutnya, tinggal masukin array ke key yg sudah dibuat di line 32
+    grouped[p].push(itemGroup[i]);
+  }
+
+  // langkah terakhir hasil grouping dikembalikan
+  return grouped;
+}
