@@ -25,7 +25,7 @@ function tampilkanTrans() {
 
   stringData =
     `<div class="kembali">
-        <a href="halamanAwal.html">
+        <a href="index.html">
           <svg
             data-icon-name="left-arrow"
             data-style="line"
