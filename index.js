@@ -13,7 +13,7 @@ user.innerHTML = nama + "!";
 const data = localStorage.getItem("data");
 // parse data dalam bentuk array/obj
 const parsedData = JSON.parse(data);
-
+console.log(parsedData);
 // Untuk ini sebenarnya bisa dikerjakan di akhir.
 // ini untuk keperluan transaksi hari ini di halaman awal
 // jadi pada transaksi hari ini yang akan muncul hanya tanggal hari ini saja
@@ -21,7 +21,7 @@ const parsedData = JSON.parse(data);
 // jadi yang di filter yaitu parsedData.
 // Mengambil tanggal saat ini dalam format YYYY-MM-DD
 const tanggalHariIni = new Date().toISOString().slice(0, 10);
-// console.log(tanggalHariIni);
+
 const transaksiHariIni = parsedData.filter(
   (item) => item.tgl === tanggalHariIni
 );
@@ -31,11 +31,17 @@ let stringData = "";
 
 stringData = `<div class="mainDesc">
 <h3>Transaksi terkini</h3>
-<a href="laporanTrans.html"> <div>Lihat semua</div></a>
+<a href="laporanTrans.html">Lihat semua</a>
 </div>`;
 
 // buat looping data di array, pakai forEach
 transaksiHariIni.forEach((item) => {
+  // buat format angka di transaksi terkini.
+  // memakai numeraljs (library)
+  // jgn lupa klo mau pake numeraljs tambahkan jg scriptnya di file html
+  // ini berfunsi untuk memformat jml yang ada di LS misal dari 1000 jd 1,000
+  const jmlDiformat = numeral(item.jml).format("0,0");
+
   // buat html pakai template literal
   let htmlData = `<div id="mainContent1" class="mainContent1">
           <div class="borderIcon">
@@ -81,7 +87,7 @@ transaksiHariIni.forEach((item) => {
           <div id="tanggal" class="tanggal">${formatDateToIndonesian(
             item.tgl
           )}</div>
-          <div id="jumlah" class="jumlah">${formatToIDR(item.jml)}</div>
+          <div id="jumlah" class="jumlah">${"Rp. " + jmlDiformat}</div>
         </div>`;
 
   // masukkan html ke data penampung
@@ -90,14 +96,14 @@ transaksiHariIni.forEach((item) => {
 
 // Function format untuk menjadi rupiah
 // fungsinya dipanggil tp lgsg masuk ke looping
-function formatToIDR(number) {
-  // Use the toLocaleString() function to format the number
-  return Number(number).toLocaleString("id-ID", {
-    style: "currency",
-    currency: "IDR",
-    minimumFractionDigits: 0, // No decimal places
-  });
-}
+// function formatToIDR(number) {
+//   // Use the toLocaleString() function to format the number
+//   return Number(number).toLocaleString("id-ID", {
+//     style: "currency",
+//     currency: "IDR",
+//     minimumFractionDigits: 0, // No decimal places
+//   });
+// }
 
 // function untuk merubah format tanggal menjadi '21 juni 2023'
 // fungsinya dipanggil tp lgsg masuk ke looping

@@ -17,17 +17,49 @@
   </head>
   <body>
     <div id="container" class="container">
-      <h2>Laporan Transaksi</h2>
+      <div class="kembali">
+        <a href="halamanAwal.html">
+          <svg
+            data-icon-name="left-arrow"
+            data-style="line"
+            icon_origin_id="11972"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            id="left-arrow"
+            class="icon line"
+            width="40"
+            height="40"
+          >
+            <path
+              style="
+                fill: none;
+                stroke: rgb(255, 255, 255);
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 1;
+              "
+              d="M21,12H3M6,9,3,12l3,3"
+              id="primary"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <h1>Laporan Transaksi</h1>
       <div class="main">
         <div class="pilihTanggal">
           <label for="#">Masukkan tanggal</label>
-          <input class="kolomInput" id="tanggal" type="date" />
+          <input
+            class="kolomInput"
+            id="tanggal"
+            type="date"
+            placeholder="21-06-1993"
+          />
         </div>
         <div>
           <button type="submit" onclick="tampilkanTrans()">Pilih</button>
         </div>
       </div>
-      <!-- <div id="mainContent" class="mainContent">
+      <div id="mainContent" class="mainContent">
         <div class="borderIcon">
           <div class="icon">
             <svg
@@ -70,8 +102,13 @@
         <div class="judul">Judul</div>
         <div class="tanggal">Tanggal</div>
         <div class="jumlah">Jumlah</div>
-      </div> -->
+      </div>
+      <div class="total">
+        <div class="descTotal">Total</div>
+        <div class="jmlTotal">0</div>
+      </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
     <script src="laporanTrans.js"></script>
   </body>
 </html>

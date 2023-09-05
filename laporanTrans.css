@@ -4,8 +4,6 @@
 }
 
 body {
-  /* margin: 0;
-    padding: 0; */
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -15,11 +13,19 @@ body {
 
 .container {
   background-color: black;
-  margin-top: 5px;
-  /* height: 350px; */
+  height: 640px;
+  /* margin-top: 5px; */
 }
 
-.container h2 {
+.container .kembali {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.container h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +41,7 @@ body {
   margin: 15px auto 25px;
   border: 2px solid darkslategray;
   border-radius: 5px;
-  width: 80%;
+  width: 85%;
   height: 35px;
 }
 
@@ -55,11 +61,11 @@ body {
 }
 
 .container .mainContent {
-  width: 80%;
+  width: 90%;
   margin: auto;
   list-style: none;
   display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-columns: 0.6fr 2fr 1fr;
   grid-template-areas:
     "borderIcon judul jumlah"
     "borderIcon tanggal jumlah";
@@ -106,4 +112,21 @@ body {
   display: flex;
   justify-content: flex-end;
   font-size: 13px;
+}
+
+/* ini untuk grid bagian total */
+.container .total {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  justify-items: end;
+}
+
+.container .total .descTotal {
+  font-size: 20px;
+}
+
+.container .total .jmlTotal {
+  font-size: 23px;
 }
