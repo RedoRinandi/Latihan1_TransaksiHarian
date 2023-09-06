@@ -55,9 +55,16 @@ function tampilkanTrans() {
       <div class="main">
         <div class="pilihTanggal">
           <label for="#">Masukkan tanggal</label>
-          <input class="kolomInput" id="tanggal" type="date" />
         </div>
-        <div>
+        <div class="pilihTanggal">
+          <input
+            class="kolomInput"
+            id="tanggal"
+            type="date"
+            placeholder="21-06-1993"
+          />
+        </div>
+        <div class="pilihTanggal">
           <button type="submit" onclick="tampilkanTrans()">Pilih</button>
         </div>
       </div>` + stringJmlTotalTrans;
