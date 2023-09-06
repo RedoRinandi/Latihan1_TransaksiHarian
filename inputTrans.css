@@ -10,7 +10,7 @@ body {
 
 .container {
   background-color: black;
-  height: 630px;
+  height: 900px;
   /* border-radius: 10px;
   margin-top: 5px; */
 }
@@ -27,12 +27,12 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 45px 10px;
   padding: 5px;
 }
 
 .container .formInput form {
-  width: 95%;
+  width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -47,27 +47,33 @@ body {
   border-radius: 5px;
 }
 
-.container .formInput div.button {
-  display: flex;
-  justify-content: end;
-}
-
 .container .formInput .kolom label {
   grid-column: span 3;
+  font-weight: bold;
 }
 
 .container .formInput .kolom input {
-  grid-column: span 9;
+  grid-column: span 12;
   border-radius: 5px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 .container .formInput .button button {
   grid-column: span 12;
-  width: 80px;
-  height: 31px;
+  height: 40px;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
+
+  display: flex;
+  background: darkslategray;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* .container .formInput .button {

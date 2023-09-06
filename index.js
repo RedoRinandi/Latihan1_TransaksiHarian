@@ -47,39 +47,58 @@ transaksiHariIni.forEach((item) => {
           <div class="borderIcon">
             <div id="icon" class="icon">
               <svg
-                data-icon-name="sign-out-2"
+                data-icon-name="debit-purchase-left"
                 data-style="line"
-                icon_origin_id="12090"
+                icon_origin_id="18778"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                id="sign-out-2"
+                data-name="Line Color"
+                id="debit-purchase-left"
                 class="icon line"
                 width="30"
                 height="30"
               >
-                <polyline
-                  style="
-                    fill: none;
-                    stroke: rgb(234, 234, 234);
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    stroke-width: 1;
-                  "
-                  points="18 9 21 12 18 15"
-                  id="primary"
-                ></polyline>
                 <path
                   style="
                     fill: none;
-                    stroke: rgb(234, 234, 234);
+                    stroke: rgb(255, 255, 255);
                     stroke-linecap: round;
                     stroke-linejoin: round;
                     stroke-width: 1;
                   "
-                  d="M21,12H7m7,4v3a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1V5A1,1,0,0,1,4,4h9a1,1,0,0,1,1,1V8"
-                  data-name="primary"
-                  id="primary-2"
+                  d="M7.45,14.5h.1m1.9,0h.1"
+                  id="secondary-upstroke"
                 ></path>
+                <line
+                  style="
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1;
+                  "
+                  y2="9"
+                  x2="3"
+                  y1="9"
+                  x1="21"
+                  id="secondary"
+                ></line>
+                <rect
+                  style="
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1;
+                  "
+                  transform="translate(24 24) rotate(180)"
+                  rx="1"
+                  height="14"
+                  width="18"
+                  y="5"
+                  x="3"
+                  id="primary"
+                ></rect>
               </svg>
             </div>
           </div>
