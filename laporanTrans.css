@@ -66,6 +66,11 @@ body {
   font-size: 18px;
   color: white;
   background-color: rgb(45 45 45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .container .mainContent {
