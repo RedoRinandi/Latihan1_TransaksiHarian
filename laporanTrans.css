@@ -52,8 +52,7 @@ body {
 }
 
 .container .main .pilihTanggal input {
-  /* grid-column: span 12; */
-  width: 325px;
+  grid-column: span 12;
   height: 30px;
   border-radius: 5px;
 }
