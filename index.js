@@ -13,7 +13,6 @@ user.innerHTML = nama + "!";
 const data = localStorage.getItem("data");
 // parse data dalam bentuk array/obj
 const parsedData = JSON.parse(data);
-console.log(parsedData);
 // Untuk ini sebenarnya bisa dikerjakan di akhir.
 // ini untuk keperluan transaksi hari ini di halaman awal
 // jadi pada transaksi hari ini yang akan muncul hanya tanggal hari ini saja
@@ -25,6 +24,7 @@ const tanggalHariIni = new Date().toISOString().slice(0, 10);
 const transaksiHariIni = parsedData.filter(
   (item) => item.tgl === tanggalHariIni
 );
+console.log(transaksiHariIni);
 
 // buat variable untuk menampung data string
 let stringData = "";
@@ -34,16 +34,76 @@ stringData = `<div class="mainDesc">
 <a href="laporanTrans.html">Lihat semua</a>
 </div>`;
 
-// buat looping data di array, pakai forEach
-transaksiHariIni.forEach((item) => {
-  // buat format angka di transaksi terkini.
-  // memakai numeraljs (library)
-  // jgn lupa klo mau pake numeraljs tambahkan jg scriptnya di file html
-  // ini berfunsi untuk memformat jml yang ada di LS misal dari 1000 jd 1,000
-  const jmlDiformat = numeral(item.jml).format("0,0");
+if (transaksiHariIni.length == 0) {
+  htmlData = `<div class="tidakAdaTransaksi">
+        <svg
+          data-icon-name="present-close"
+          data-style="line"
+          icon_origin_id="17466"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          id="present-close"
+          class="icon line"
+          width="80"
+          height="80"
+        >
+          <path
+            style="
+              fill: none;
+              stroke: rgb(255, 255, 255);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 1;
+            "
+            d="M19,17H5a1,1,0,0,1-1-1V4H20V16A1,1,0,0,1,19,17ZM3,4H21M10.4,17,8,20m5.6-3L16,20"
+            id="primary"
+          ></path>
+          <line
+            style="
+              fill: none;
+              stroke: rgb(255, 255, 255);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 1;
+            "
+            y2="8"
+            x2="14.5"
+            y1="13"
+            x1="9.5"
+            data-name="primary"
+            id="primary-2"
+          ></line>
+          <line
+            style="
+              fill: none;
+              stroke: rgb(255, 255, 255);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 1;
+            "
+            y2="8"
+            x2="9.5"
+            y1="13"
+            x1="14.5"
+            data-name="primary"
+            id="primary-3"
+          ></line>
+        </svg>
+        <h4>Tidak ada transaksi</h4>
+      </div>`;
 
-  // buat html pakai template literal
-  let htmlData = `<div id="mainContent1" class="mainContent1">
+  stringData += htmlData;
+} else {
+  // buat looping data di array, pakai forEach
+  transaksiHariIni.forEach((item) => {
+    // buat format angka di transaksi terkini.
+    // memakai numeraljs (library)
+    // jgn lupa klo mau pake numeraljs tambahkan jg scriptnya di file html
+    // ini berfunsi untuk memformat jml yang ada di LS misal dari 1000 jd 1,000
+    const jmlDiformat = numeral(item.jml).format("0,0");
+
+    // buat html pakai template literal
+    let htmlData = `<div id="mainContent1" class="mainContent1">
           <div class="borderIcon">
             <div id="icon" class="icon">
               <svg
@@ -109,9 +169,10 @@ transaksiHariIni.forEach((item) => {
           <div id="jumlah" class="jumlah">${"Rp. " + jmlDiformat}</div>
         </div>`;
 
-  // masukkan html ke data penampung
-  stringData += htmlData;
-});
+    // masukkan html ke data penampung
+    stringData += htmlData;
+  });
+}
 
 // Function format untuk menjadi rupiah
 // fungsinya dipanggil tp lgsg masuk ke looping

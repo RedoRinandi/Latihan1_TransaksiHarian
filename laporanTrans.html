@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="container" class="container">
-      <div class="kembali">
+      <div class="header">
         <a href="index.html">
           <svg
             data-icon-name="left-arrow"
@@ -43,16 +43,15 @@
             ></path>
           </svg>
         </a>
+        <h4>Laporan Transaksi</h4>
+        <span></span>
       </div>
-      <h1>Laporan Transaksi</h1>
       <div class="main">
         <div class="pilihTanggal">
           <label for="#">Masukkan tanggal</label>
-        </div>
-        <div class="pilihTanggal">
           <input class="kolomInput" id="tanggal" type="date" />
         </div>
-        <div class="pilihTanggal">
+        <div class="submitTanggal">
           <button type="submit" onclick="tampilkanTrans()">
             <svg
               data-icon-name="date-add"
@@ -80,6 +79,9 @@
             Pilih
           </button>
         </div>
+      </div>
+      <div class="spacing">
+        <span></span>
       </div>
       <!-- <div id="mainContent" class="mainContent">
         <div class="borderIcon">

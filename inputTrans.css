@@ -10,25 +10,28 @@ body {
 
 .container {
   background-color: black;
-  height: 900px;
-  /* border-radius: 10px;
-  margin-top: 5px; */
+  height: 100vh; /* ini klo di tailwind h-screen, ini fungsinya untuk ngebuat ukuran tinggi tiap screen*/
 }
 
-.container .kembali {
+.container .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 35px;
-  margin-left: 10px;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
 }
 
-.container h1 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0px 10px 45px 10px;
-  padding: 5px;
+.container .header a {
+  width: 33.33%;
+}
+
+.container .header h4 {
+  width: 33.33%;
+  text-align: center;
+}
+
+.container .header span {
+  width: 33.33%;
 }
 
 .container .formInput form {
@@ -40,45 +43,49 @@ body {
   padding: 5px;
 }
 
-.container .formInput div {
+/* ini untuk mengatur kotak-kotak input yang ada di dalam grid,
+karena kotak input yang ada di dalam grid ukurannya bisa berbeda.
+bisa juga dipakaikan di setiap parentnya / ditaro seperti ini agar sudah di set di awal,
+jd tidak perlu ditaro di tiap parentnya. */
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+.container .formInput .kolom {
   grid-column: span 12;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  border-radius: 5px;
 }
 
 .container .formInput .kolom label {
-  grid-column: span 3;
-  font-weight: bold;
+  display: block;
 }
 
 .container .formInput .kolom input {
-  grid-column: span 12;
-  border-radius: 5px;
+  width: 100%;
+  /* box-sizing: border-box; */
   height: 30px;
-  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.container .formInput .button {
+  grid-column: span 12;
 }
 
 .container .formInput .button button {
-  grid-column: span 12;
-  height: 40px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-
   display: flex;
-  background: darkslategray;
   justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 5px;
+  background: rgb(45 45 45);
+  /* box-sizing: border-box; */
+  margin-top: 5px;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
 }
-
-/* .container .formInput .button {
-    justify-items: end;
-} */
 
 /* ini contoh pake tailwind (framework buat css) */
 /* .coba form {

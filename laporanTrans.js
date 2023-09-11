@@ -24,7 +24,7 @@ function tampilkanTrans() {
   let stringData = "";
 
   stringData =
-    `<div class="kembali">
+    `<div class="header">
         <a href="index.html">
           <svg
             data-icon-name="left-arrow"
@@ -50,20 +50,15 @@ function tampilkanTrans() {
             ></path>
           </svg>
         </a>
+        <h4>Laporan Transaksi</h4>
+        <span></span>
       </div>
-      <h1>Laporan Transaksi</h1>
       <div class="main">
         <div class="pilihTanggal">
           <label for="#">Masukkan tanggal</label>
+          <input class="kolomInput" id="tanggal" type="date" />
         </div>
-        <div class="pilihTanggal">
-          <input
-            class="kolomInput"
-            id="tanggal"
-            type="date"
-          />
-        </div>
-        <div class="pilihTanggal">
+        <div class="submitTanggal">
           <button type="submit" onclick="tampilkanTrans()">
             <svg
               data-icon-name="date-add"
@@ -91,6 +86,9 @@ function tampilkanTrans() {
             Pilih
           </button>
         </div>
+      </div>
+      <div class="spacing">
+        <span></span>
       </div>` + stringJmlTotalTrans;
 
   // ini kondisi untuk jika memlih tanggal yang belum ada transaksi

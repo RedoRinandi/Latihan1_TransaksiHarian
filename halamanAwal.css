@@ -10,10 +10,7 @@ body {
 
 .container {
   background-color: black;
-  height: 900px;
-  /* border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px; */
+  height: 100vh; /* ini klo di tailwind h-screen, ini fungsinya untuk ngebuat ukuran tinggi tiap screen*/
 }
 
 .container .header {
@@ -138,6 +135,12 @@ body {
   margin-top: 5px;
 }
 
+.container .spacing {
+  border: 1px solid rgb(45 45 45);
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+
 .container .mainContent .mainDesc {
   display: flex;
   justify-content: space-between;
@@ -206,4 +209,10 @@ body {
   display: flex;
   justify-content: end;
   font-size: 13px;
+}
+
+.container .tidakAdaTransaksi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
